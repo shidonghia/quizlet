@@ -1,0 +1,82 @@
+
+
+
+<div class="DashboardLayout container-fluid">
+     
+          <div id="menu-bar">
+            <ul>
+              <li>
+                <img src="image/home.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a class="active" href="main/homepage">Home Page</a>
+              </li>
+              <li>
+                <img src="image/term.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a href="http://localhost:8081/main/<%= iduser %>/term">Term</a>
+              </li>
+              <li>
+                <img src="image/folder.png" alt="logo" class="float-left" width="25px" height="25px">
+                <!-- <a href="main/folder">Folder</a> -->
+                <a href="http://localhost:8081/main/<%= iduser %>/folder">Folder</a>
+
+              </li>
+              <li>
+                <img src="image/class.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a href="http://localhost:8081/main/<%= iduser %>/class">Class</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div id="content-detail">
+              <div class="container">
+                <div style="width: 780px; height: 62px;">
+                  <p  class="float-left" style="font-size: 30px; margin-left: 10px;"> <b>Recently</b></p>
+                  <a href="#" class="float-right m-3" >
+                    <span> see all >></span>
+                  </a>
+                </div>
+<!-- nghĩa có sửa-->
+                  <% for(var i = 0; i < 4; i++){%>
+                    <div class="Recently">
+                      <a href="learning/<%= iduser %><%= countTerm[i].set_id %>" style="color: #FFF;">
+                        <div class="term-discovery">
+                          <p><%= setName[i].termName %></p>
+                          <p style="opacity: 0.3;"> <%= countTerm[i].totalTerms %> thuat ngu</p>
+                          <h3><%= user %></h3>
+                        </div>
+                      </a>
+                  <% } %>
+                  </div> 
+<!-- kết thúc phần sửa-->
+
+
+                    <p  class="float-left" style="font-size: 20px; margin-left: 10px; color: black;"> <b>You might like it</b></p>
+                  <div class="might-like">
+                    <a href="learning" style="color: #FFF;">
+                      <div class="term-discovery float-left " style="margin-left: -150px;">
+                        <p>titleTerm</p>
+                        <p>11 thuat ngu</p>
+                        <h3>userCreate</h3>
+                      </div>
+                    </a>
+                    <a href="learning" style="color: #FFF;" >
+                      <div class="term-discovery float-left">
+                        <p>titleTerm</p>
+                        <p>11 thuat ngu</p>
+                        <h3>userCreate</h3>
+                      </div>
+                    </a>
+                    <a href="learning" style="color: #FFF;">
+                      <div class="term-discovery float-left">
+                        <p>titleTerm</p>
+                        <p>11 thuat ngu</p>
+                        <h3>userCreate</h3>
+                      </div>
+                    </a>
+                 
+                </div>       
+              </div>
+          </div>
+      
+</div>
+

@@ -1,0 +1,130 @@
+
+
+
+
+
+<div class="DashboardLayout container-fluid">
+     
+          <div id="menu-bar">
+            <ul>
+              <li>
+                <img src="image/home.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a  href= "http://localhost:8081/main/<%= iduser %>/homepage">Home Page</a>
+              </li>
+              <li>
+                <img src="image/term.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a class="active" href="http://localhost:8081/main/<%= iduser %>/term">Term</a>             
+              </li>
+              <li>
+                <img src="image/folder.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a   href="http://localhost:8081/main/<%= iduser %>/folder">Folder</a>
+              </li>
+              <li>
+                <img src="image/class.png" alt="logo" class="float-left" width="25px" height="25px">
+                <a  href="http://localhost:8081/main/<%= iduser %>/class">Class</a>
+              </li>
+            </ul>              
+          </div>
+
+
+          <div id="content-detail">
+              <div class="container profileheader">     
+
+                  <div class="avatar ">
+                    <img src="image/avt2.jpg" alt="avt" class="float-left " style="border-radius: 50%; height: 130px; width: 130px; margin-left: 150px ;" >  
+                  </div>
+
+                  <div class="profile float-left">
+                      <div >
+                        <h1 class="username"> <%= user%></h1>
+                      </div>  
+
+                      <div class="tab">
+                          <ul>
+                            <li class="float-left" style="border-right: 1px solid #ccc;"><a href="#">Hoat dong gan day</a></li>
+                            <li class="float-left" style="border-right: 1px solid #ccc;" ><a href="#">Da tao</a></li>
+                            <li class="float-left" style="border-right: 1px solid #ccc;"><a href="#">Da hoc</a></li>
+                            <li class="float-left"><a href="#">Thu muc</a></li>
+                          </ul>
+                      </div>
+
+                  </div>
+              </div>
+
+
+
+
+              <div class="dashboardPage">
+                <div class="container" >
+                    <div class="create">
+                      <a href="http://localhost:8081/main/<%= iduser %>/create-set">
+                         Create + 
+                      </a>
+                    </div>
+
+                    <div class="search " >
+                      <input type="text" placeholder="Search..">
+                    </div>
+
+                   <% for( var i = 0; i < countTerm.length; i++){ %>
+                  <div class="list_term">
+                    <div class="term">
+                        <span class="termsCount">
+                          <%= countTerm[i].totalTerms %> thuat ngu
+                        </span>
+                        <br>
+                        <span class="header">
+                          <%= setName[i].termName%>
+                        </span>
+                    </div>
+                    <% }%>
+                    <!-- <div class="term">
+                        <span class="termsCount">
+                            5 thuat ngu
+                        </span>
+                        <br>
+                        <span class="header">
+                              header
+                        </span>
+                     </div> -->
+                      <!-- <div class="term">
+                        <span class="termsCount">
+                            5 thuat ngu
+                        </span>
+                        <br>
+                        <span class="header">
+                              header
+                        </span>
+                    </div> -->
+                    <!-- <div class="term">
+                      <span class="termsCount">
+                          5 thuat ngu
+                      </span>
+                      <br>
+                      <span class="header">
+                            header
+                      </span>
+                  </div> -->
+                    <!-- <div class="term">
+                      <span class="termsCount">
+                          5 thuat ngu
+                      </span>
+                      <br>
+                      <span class="header">
+                            header
+                      </span>
+                  </div> -->
+
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+      </div>
+
+</div>
+
+
+
+ 

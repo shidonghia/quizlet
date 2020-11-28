@@ -1,0 +1,70 @@
+<div>
+    
+    <div id="areaCard" style="height: 600px;width: 600px;background-color: green;margin:auto;padding:auto;text-align: center;position: relative;">
+        <p id="definition" style="position: absolute;top: 40%;left: 40%;font-size: 32px;"><%= tagdataDef[0].definition %></p>
+        <p id="trueword" style="position: absolute;top: 40%;left: 40%; display: none;font-size: 32px;"><%= tagdataDef[0].term %></p>
+    </div>
+    <button id="preWord" type="button" onclick="preWord()">Từ trước</button>
+    <button id="nextWord" type="button" onclick="nextWord()">Từ tiếp</button>
+</div>
+<script>
+    var arrTerm = [];
+    var arrDefinition = [];
+    <% for(var j=0; j<tagdataDef.length; j++) { %>
+            arrDefinition.push('<%- tagdataDef[j].definition%>');
+            arrTerm.push('<%- tagdataDef[j].term%>');
+    <%}%>;
+    var arrLength = arrDefinition.length;
+    var definition = document.getElementById('definition').innerHTML;
+    var index = arrDefinition.indexOf(definition);
+    if(index === 0){
+        document.getElementById('preWord').disabled = true;
+    }
+    if(index === arrLength-1){
+        document.getElementById('nextWord').disabled = true;
+    }
+    function nextWord(){
+        var definition = document.getElementById('definition').innerHTML;
+        document.getElementById('definition').style.display = 'block';
+        document.getElementById('trueword').style.display = 'none';
+        var index = arrDefinition.indexOf(definition);
+        if(index+1 === arrLength-1){
+            document.getElementById('definition').innerHTML = arrDefinition[index+1];
+            document.getElementById('trueword').innerHTML = arrTerm[index+1];
+            
+            document.getElementById('nextWord').disabled = true;
+        }
+        else{
+            document.getElementById('definition').innerHTML = arrDefinition[index+1];
+            document.getElementById('trueword').innerHTML = arrTerm[index+1];
+            document.getElementById('preWord').disabled = false;
+        }
+        
+    }
+    function preWord(){
+        var definition = document.getElementById('definition').innerHTML;
+        var index = arrDefinition.indexOf(definition);
+        if(index-1 === 0){
+            document.getElementById('definition').innerHTML = arrDefinition[index-1];
+            document.getElementById('trueword').innerHTML = arrTerm[index-1];
+            document.getElementById('preWord').disabled = true;
+        }
+        else{
+            document.getElementById('definition').innerHTML = arrDefinition[index-1];
+            document.getElementById('trueword').innerHTML = arrTerm[index-1];
+            document.getElementById('nextWord').disabled = false;
+        }
+        
+    }
+    document.getElementById('areaCard').addEventListener('click', function(){
+        var definition = document.getElementById('definition');
+        var term = document.getElementById('trueword');
+        if(window.getComputedStyle(definition).display === "none"){
+            definition.style.display = 'block';
+            term.style.display = 'none';
+        } else {
+            definition.style.display = 'none';
+            term.style.display = 'block';
+        }
+    })
+</script>

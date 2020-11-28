@@ -1,0 +1,129 @@
+.alert{
+    position: relative;
+    top: 0px;
+}
+.header-create{
+   position: relative;
+   top: 50px;
+}
+
+.heading{
+    position: relative;
+    top: 100px;
+}
+.heading input{
+    width: 600px;
+    border: none;
+}
+
+.heading  input:focus {
+    background-color: #fdc800;
+    outline: none;
+    border-radius: 5px;
+}
+.heading  .border {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    -ms-flex-item-align: end;
+    display: block;
+    height: .25rem;
+    box-shadow: 0 .125rem 0 0 var(--ui_color_gray_30);
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    width: 600px;
+    background-color: black;
+
+}
+
+.tagSet{
+    position: relative;
+    top: 150px;
+}
+
+.tag{
+    height: 100px;
+    width: 1000px;
+    background-color: #F9FAFA;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+
+.inputTag{
+    margin-top: 20px;
+}
+.inputTag input{
+    width: 400px;
+    border: none;
+}
+
+.inputTag  input:focus {
+    /* background-color: #fdc800; */
+    outline: none;
+    border-radius: 5px;
+}
+.inputTag  .border {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    -ms-flex-item-align: end;
+    display: block;
+    height: .25rem;
+    box-shadow: 0 .125rem 0 0 var(--ui_color_gray_30);
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    width: 400px;
+    background-color: #fdc800;
+
+}
+
+.counter{
+    margin-left: 15px;
+}
+
+/* .button-create {
+    position: relative;
+    top: 200px;
+    left: -500px;
+}
+
+.button-create  button:link, button:visited {
+    background-color: #002147;
+    color: white;
+    padding: 8px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+ .button-create  button:hover, button:active {
+    background-color:  #fdc800;
+  } */
+
+  .button-create {
+    position: relative;
+    top: 200px;
+    left: -500px;
+}
+  .button{
+    text-align: center;
+    color: #002147 !important;
+    padding: 8px 0;
+    width: 104px;
+    background: #fdc800;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    border: 2px solid #fdc800;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  
+  
+  .button:hover{
+    background: #002147;
+    color: #f1f1f1 !important;  
+  }
+  

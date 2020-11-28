@@ -1,0 +1,96 @@
+<div>
+    <p id="definition"><%= tagdataDef[0].definition %></p>
+    <p id="trueword" style="display:none;"><%= tagdataDef[0].term %></p>
+    <h3 id="status"></h3>
+    <div id="form">
+        <form name="learnWord" method="POST" action=""></form>
+            <input type="text" name="word" id="word">
+            <button type="button" id="submit" onclick="check()">Gửi</button>
+            <button type="button" id="viewAnswer" onclick="viewAnswer()">Xem đáp án</button>
+        </form>
+    </div>
+
+    <p id="numQuestion"></p>
+    <p style="display:inline;">Đúng: </p>
+    <p id="trueAnswer" style="display:inline;">0</p><br>
+    <p style="display:inline;">Sai: </p>
+    <p id="wrongAnswer" style="display:inline;">0</p>
+    <button id="reload" style="display: none;" onclick="window.location.reload()">Làm lại</button>
+</div>
+
+
+<script>
+    var arrTerm = [];
+    var arrDefinition = [];
+    <% for(var j=0; j<tagdataDef.length; j++) { %>
+            arrDefinition.push('<%- tagdataDef[j].definition%>');
+            arrTerm.push('<%- tagdataDef[j].term%>');
+    <%}%>;
+    var count = 0;
+    var trueAnswer = 0;
+    var wrongAnswer = 0;
+    var numQues = count + 1 + '/' + arrTerm.length;
+    document.getElementById('numQuestion').innerHTML = numQues;
+    function check(){
+        if(count < arrTerm.length) {    
+            var trueWord = document.getElementById('trueword').innerHTML;
+            var word = document.getElementById('word');
+            if(trueWord.toLowerCase() !== word.value.toLowerCase()){
+                document.getElementById('status').innerHTML = 'False';
+                document.getElementById('word').style.backgroundColor = '#ff3333';
+                document.getElementById('trueword').style.display = 'block';
+                document.getElementById('submit').style.display = 'none';
+                wrongAnswer += 1;
+                document.getElementById('wrongAnswer').innerHTML = wrongAnswer;
+            } else {
+                document.getElementById('status').innerHTML = 'True';
+                document.getElementById('word').style.backgroundColor = '#66ff33';
+                document.getElementById('trueword').style.display = 'block';
+                document.getElementById('submit').style.display = 'none';
+                trueAnswer += 1;
+                document.getElementById('trueAnswer').innerHTML = trueAnswer;
+            }
+            setTimeout(function(){
+                if(count < arrTerm.length - 1){
+                    document.getElementById('trueword').style.display = 'none';
+                    document.getElementById('submit').style.display = 'inline';
+                    count++;
+                    document.getElementById('status').innerHTML = "";
+                    document.getElementById('definition').innerHTML = arrDefinition[count];
+                    document.getElementById('trueword').innerHTML = arrTerm[count];
+                    document.getElementById('word').value = '';
+                    document.getElementById('word').style.backgroundColor = 'white';
+                    numQues = count + 1 + '/' + arrTerm.length;
+                    document.getElementById('numQuestion').innerHTML = numQues;
+                } else {
+                    document.getElementById('status').innerHTML = "Done";
+                    document.getElementById('reload').style.display = 'block';
+                    document.getElementById('trueword').style.display = 'none';
+                    document.getElementById('form').style.display = 'none';
+                    document.getElementById('definition').style.display = 'none';
+                    document.getElementById('status').style.display = 'none';
+                    document.getElementById('numQuestion').style.display = 'none';
+                }
+                
+            }, 2000)
+        } else {
+            document.getElementById('status').innerHTML = "Done";
+            document.getElementById('reload').style.display = 'block';
+        }
+    }
+    
+    function viewAnswer(){
+        var defi = 'Định nghĩa: ' + arrDefinition[count];
+        var word = 'Từ bạn nhập là: ' + document.getElementById('word').value;
+        var term = 'Đáp án đúng: ' + arrTerm[count];
+        document.getElementById('definition').style.display = 'block';
+        document.getElementById('trueword').style.display = 'block';
+        document.getElementById('status').style.display = 'block';
+        document.getElementById('definition').innerHTML = defi;
+        document.getElementById('status').innerHTML = word;
+        document.getElementById('trueword').innerHTML = term;
+        document.getElementById('reload').style.display = 'block';
+        document.getElementById('form').style.display = 'none';
+        document.getElementById('numQuestion').style.display = 'none';       
+    }
+</script>

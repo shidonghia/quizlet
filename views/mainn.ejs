@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://localhost:8081" />
+  <title>mainn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css_boostrap/bootstrap.min.css">
+  
+   
+    <link rel="stylesheet" href="css/style_main.css">
+    <link rel="stylesheet" href="css/style_term.css">
+    <link rel="stylesheet" href="css/style_createSet.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  
+  </style>
+</head>
+<body>
+  <div class="jumbotron-fluid text-center"   id="top-bar" style="margin-bottom:0 ; height: 100px;">
+    <div class="row">
+        <div class="col-sm-4 ">
+            <img src="image/logo3.png" style="margin-left: -100px; margin-top: 30px;" alt="logo">
+           
+        </div>
+        <div class="col-sm-4">
+            <form class="form-inline" style="margin-top: 30px; margin-left: -220px;">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search..">
+              <button class="btn button my-2 my-sm-0" type="button" style="height: auto;">Search </button>
+            </form>           
+        </div>
+        <div class="col-sm-4">
+          <div class="user" style="margin-top: 30px; margin-left: 100px;">
+             <h3 class="float-left" style="color: #fdc800;"><%= user %></h3>
+           
+            <img src="image/avt2.jpg" alt="avt" class="float-left " style="border-radius: 50%; height: 40px; width: 40px; margin-left: 10px;" >
+          </div>
+      </div>
+    </div>
+</div>
+
+  <%-include("./main/" + page + ".ejs") %>
+  <script src="js/action.js"></script>
+</body>
+</html>

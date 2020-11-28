@@ -1,0 +1,182 @@
+
+
+
+<div class="DashboardLayout container-fluid">
+     
+    <div id="menu-bar">
+      <ul>
+        <li>
+          <img src="image/home.png" alt="logo" class="float-left" width="25px" height="25px">
+          <a class="active" href="main/homepage">Home Page</a>
+        </li>
+        <li>
+          <img src="image/term.png" alt="logo" class="float-left" width="25px" height="25px">
+          <a href="http://localhost:8081/main/<%= iduser %>/term">Term</a>
+        </li>
+        <li>
+          <img src="image/folder.png" alt="logo" class="float-left" width="25px" height="25px">
+          <!-- <a href="main/folder">Folder</a> -->
+          <a href="http://localhost:8081/main/<%= iduser %>/folder">Folder</a>
+
+        </li>
+        <li>
+          <img src="image/class.png" alt="logo" class="float-left" width="25px" height="25px">
+          <a href="http://localhost:8081/main/<%= iduser %>/class">Class</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div id="content-detail">
+        <div class="container">
+              
+                <h2 class="header-create" >Tạo học phần mới </h2>
+
+                <form action="http://localhost:8081/main/1/create-set" method="POST">
+                    <div class="heading">
+                            <div class="setHeader">
+                                <input type="text" name="TieuDe" placeholder="Nhập tiêu đề, ví dụ 'Sinh học-Chương 1' ">
+                                <span class="border"></span>
+                                <div >
+                                    <p>Tiêu đề</p>
+                                </div>
+                            </div>
+
+                            <div class="setDescription">
+                                <input type="text" name="MoTa" placeholder="Thêm mô tả...">
+                                <span class="border"></span>
+                                <div >
+                                    <p>Mô tả</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="tagSet">
+                        <div class="tag">
+                            <span class="counter">
+                                1
+                            </span>
+
+                            <div class="inputTag">
+                                <div class="tagHeader float-left" style="margin-left: 10px;">
+                                    <input type="text" name="ThuatNgu1">
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Thuật ngữ</p>
+                                    </div>
+                                </div>
+                                <div class="tagDescription float-left" style="margin-left: 100px;">
+                                    <input type="text" name="DinhNghia1" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Định nghĩa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tag">
+                            <span class="counter">
+                            2
+                            </span>
+
+                            <div class="inputTag">
+                                <div class="tagHeader float-left" style="margin-left: 10px;">
+                                    <input type="text" name="ThuatNgu2" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Thuật ngữ</p>
+                                    </div>
+                                </div>
+                                <div class="tagDescription float-left" style="margin-left: 100px;">
+                                    <input type="text"  name="DinhNghia2" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Định nghĩa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tag">
+                            <span class="counter">
+                                3
+                            </span>
+
+                            <div class="inputTag">
+                                <div class="tagHeader float-left" style="margin-left: 10px;">
+                                    <input type="text" name="ThuatNgu3" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Thuật ngữ</p>
+                                    </div>
+                                </div>
+                                <div class="tagDescription float-left" style="margin-left: 100px;">
+                                    <input type="text"  name="DinhNghia3" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Định nghĩa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tag">
+                            <span class="counter">
+                            4
+                            </span>
+
+                            <div class="inputTag">
+                                <div class="tagHeader float-left" style="margin-left: 10px;">
+                                    <input type="text" name="ThuatNgu4">
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Thuật ngữ</p>
+                                    </div>
+                                </div>
+                                <div class="tagDescription float-left" style="margin-left: 100px;">
+                                    <input type="text"  name="DinhNghia4" >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Định nghĩa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tag">
+                            <span class="counter">
+                            5
+                            </span>
+
+                            <div class="inputTag">
+                                <div class="tagHeader float-left" style="margin-left: 10px;">
+                                    <input type="text" name="ThuatNgu5">
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Thuật ngữ</p>
+                                    </div>
+                                </div>
+                                <div class="tagDescription float-left" style="margin-left: 100px;">
+                                    <input type="text"  name="DinhNghia5"  >
+                                    <span class="border"></span>
+                                    <div >
+                                        <p>Định nghĩa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+
+                <div class="button-create">
+
+                    <button class="btn button" type="submit" style="height: auto;">Create + </button>
+
+                  </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+

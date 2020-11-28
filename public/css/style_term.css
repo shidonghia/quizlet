@@ -1,0 +1,94 @@
+#content-detail{
+    height: 180px;
+}
+
+#content-detail .profileheader{
+    height: 100%;
+}
+
+.profile{
+    margin-left: 80px;
+}
+
+.profile ul{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    border: 1px solid #ccc;
+    height: 40px;
+    list-style-type: none;
+}
+
+.profile ul li{
+   margin: 5px;
+ 
+}
+
+.profile ul a{
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.tab{
+    margin-top: 20px;
+  
+}
+
+#content-detail .dashboardPage{
+    
+    background-color: #eff3fb;
+}
+
+.term{
+    height: 100px;
+    max-width: 650px;
+    background-color: #FFF;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.08);
+}
+.term span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.term .termsCount{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.term .header{
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.create{
+  position: relative;
+  top: 40px;
+    margin-left: 230px;
+}
+
+.create a:link, a:visited {
+    background-color: #002147;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+ .create a:hover, a:active {
+    background-color: #fdc800;
+  }
+
+.search{
+   margin-left: 680px;
+}
+
+.search input{
+    border-radius: 5px;
+}

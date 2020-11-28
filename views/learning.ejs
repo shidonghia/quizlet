@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="http://localhost:8081" />
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css_boostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_learning.css">
+    <link rel="stylesheet" href="css/login_inpage.css">
+    <link rel="stylesheet" href="css/signup_inpage.css">
+</head>
+
+<body>
+
+<div class="jumbotron-fluid text-center"   id="top-bar" style="margin-bottom:0 ; height: 100px;">
+        <div class="row">
+            <div class="col-sm-4 ">
+                <img src="image/logo3.png" style="margin-left: -100px; margin-top: 30px;" alt="logo">
+            </div>
+            <div class="col-sm-4">
+                <form class="form-inline" style="margin-top: 30px; margin-left: -220px;">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search..">
+                  <button class="btn button my-2 my-sm-0" type="button" style="height: auto;">Search </button>
+                </form>           
+            </div>
+            <div class="col-sm-4">
+              <div class="user" style="margin-top: 30px; margin-left: 100px;">
+                 <h3 class="float-left" style="color: #fdc800;"><%= page %></h3>
+               
+                <img src="image/avt2.jpg" alt="avt" class="float-left " style="border-radius: 50%; height: 40px; width: 40px; margin-left: 10px;" >
+              </div>
+          </div>
+        </div>
+</div>
+
+<!-- 
+<div class="container"> 
+    <div class="titleWrapper" style="">
+            <div class="title">
+                <h1 class="titleTerm">   Demo   </h1>
+            </div>
+            <div class="rating">
+                    <div class="score float-left" style="margin: 5px;">
+                        <span>3,7</span>
+                    </div>
+                    <div class="displayStar float-left" style="margin: 2px;">
+                        <img src="image/star.png"  alt="star">
+                        <img src="image/star.png"  alt="star">
+                        <img src="image/star.png"  alt="star">
+                        <img src="image/rating.png"  alt="star">
+                    </div>
+
+                    <div class="ratingCount float-left" style="margin: 5px;">
+                          3 đánh giá
+                    </div>
+
+                    <button class ="float-left"  style="margin: 5px;"> 
+                        <span>
+                            Đánh giá 
+                        </span>
+                    </button>
+            </div>
+      </div>
+
+      <div class="content-study" style="margin-top: 50px; background-color: aquamarine;" >
+        <div class="row navmenu">
+            <div class="col-sm-4">
+              <div id="menu-bar">
+                
+                <ul>
+                  <li>
+                    <img src="image/credit-card.png" alt="logo" class="float-left" width="25px" height="25px">
+                    <a class="active" href="#home">Memory card</a>
+                  </li>
+                  <li>
+                    <img src="image/reading-book.png" alt="logo" class="float-left" width="25px" height="25px">
+                    <a href="#">Learn</a>
+                  </li>
+                  <li>
+                    <img src="image/write.png" alt="logo" class="float-left" width="25px" height="25px">
+                    <a href="#">Write</a>
+                  </li>
+                  <li>
+                    <img src="image/microphone.png" alt="logo" class="float-left" width="25px" height="25px">
+                    <a href="#">Spell</a>
+                  </li>
+                  <li>
+                    <img src="image/check.png" alt="logo" class="float-left" width="25px" height="25px">
+                    <a href="#">Check</a>
+                  </li>
+                </ul>              
+              </div>
+            </div>
+
+            <div class="col-sm-8">
+                study here
+            </div>
+        </div>
+      </div>
+
+</div>
+
+<div class="info-term container">
+          <p>create by : </p>
+          <span>Nam Bui</span>
+</div>
+
+<div class="container glossary">
+  <div> 
+    <h2>Glossary in this module (?)</h2> 
+  </div>
+
+  <div class="list-learning">
+    <div class="display">
+        <div class="show-title"> 
+          <p>title</p>
+        </div>
+        <div class="descript">
+          <p>descript</p>
+        </div>
+    </div>
+    <div class="display">
+        <div class="show-title"> 
+          <p>title</p>
+        </div>
+        <div class="descript">
+          <p>descript</p>
+        </div>
+    </div>
+    <div class="display">
+      <div class="show-title"> 
+        <p>title</p>
+      </div>
+      <div class="descript">
+        <p>descript</p>
+      </div>
+   </div>
+    <div class="display">
+      <div class="show-title"> 
+        <p>title</p>
+      </div>
+      <div class="descript">
+        <p>descript</p>
+      </div>
+    </div>
+    <div class="display">
+      <div class="show-title"> 
+        <p>title</p>
+      </div>
+      <div class="descript">
+        <p>descript</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<%-include("./learning/" + page + ".ejs") %>
+
+<div class="footer" style="margin-top: 200px;">
+      <h3>footer</h3>
+</div>
+  <script src="js/action.js"></script>
+</body>
+</html>

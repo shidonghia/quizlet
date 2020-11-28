@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css_boostrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css_boostrap/style.css">
+  <link rel="stylesheet" href="css/login_inpage.css">
+  <link rel="stylesheet" href="css/signup_inpage.css">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron-fluid text-center"   id="top-bar" style="margin-bottom:0 ; height: 100px;">
+        <div class="row">
+            <div class="col-sm-4 ">
+                <img src="image/logo3.png" style="margin-left: -100px; margin-top: 30px;" alt="logo">
+               
+            </div>
+            <div class="col-sm-4">
+                <form class="form-inline" style="margin-top: 30px; margin-left: -220px;">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search..">
+                  <button class="btn button my-2 my-sm-0" type="button" style="height: auto;" >Search </button>
+                </form>           
+            </div>
+            <div class="col-sm-4">
+             
+              <div class="login">
+                <a href="/login" class="login-btn"  onclick="document.getElementById('id01').style.display='block'">Login</a>
+              </div>
+
+              <div class="signup">
+                <a href="/signup" class="signup-btn"  onclick="document.getElementById('id02').style.display='block'">Sign Up</a>
+              </div>
+          </div>
+        </div>
+</div>
+
+
+    <div class="slideshow-container" style="border-bottom: 5px solid #ccc;">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="image/1-3.jpg" style="width:100% ; filter:brightness(50%);">
+        <div class="text">BEST LEARNING METHOD..</div>
+        <div class="btn-learning">
+          <a href="learning" class="default-big-btn">Start Learning</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="image/1-2.jpg" style="width:100% ; filter:brightness(50%);">
+        <div class="text">BEST LEARNING METHOD..</div>
+        <div class="btn-learning">
+          <a href="learning" class="default-big-btn">Start Learning</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="image/1-1.jpg" style="width:100% ;filter:brightness(50%);">
+        <div class="text">BEST LEARNING METHOD..</div>
+        <div class="btn-learning">
+          <a href="learning" class="default-big-btn">Start Learning</a>
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+   
+
+<!-- The dots/circles -->
+<div class="container" id="content">
+    <div class="tittle-webcome" style="height: 770px; width: 100%;">
+      <p class="text-center" style="padding-top: 100px; font-size: 50px;">Welcome to Quizlet </p>
+       <p class="text-center">Get learning to the smartest online thinking lessons globally</p>
+    </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-box">
+              <a href="#"><img class="img-responsive" src="image/logo3.png" alt="logo"></a>
+              <div class="footer-about">
+                  <p>We're always working with you to make your dream.</p>
+              </div>
+              <ul class="footer-social">
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+          <div class="footer-box">
+              <h3>Information</h3>
+              <ul class="corporate-address">
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><a href="#"> 0886868668 </a></li>
+                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><quizlet@gmail class="com"> quizlet@gmail.com</quizlet@gmail></li>
+              </ul>
+              <!-- <div class="newsletter-area">
+                  <h3>Newsletter</h3>
+                  <div class="input-group stylish-input-group">
+                      <input type="text" placeholder="Enter your e-mail here" class="form-control">
+                      <span class="input-group-addon">
+                              <button type="submit">
+                                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                              </button>  
+                          </span>
+                  </div>
+              </div> -->
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- login -->
+
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+      <label for="userName"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="userName" required>
+
+      <label for="passWord"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="passWord" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- sign up -->
+<div id="id02" class="modal" style="display: block;">
+  <form class="modal-content animate" action="" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+     
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="UserName"><b>UserName</b></label>
+      <input type="text" placeholder="Enter UserName" name="UserName" required>
+
+      <label for="PassWord"><b>PassWord</b></label>
+      <input type="password" placeholder="Enter Password" name="PassWord" required>
+
+      <label for="FirstName"><b>FirstName</b></label>
+      <input type="text" placeholder="Enter FirstName" name="FirstName" required>
+
+      <label for="LastName"><b>LastName</b></label>
+      <input type="text" placeholder="Enter LastName" name="LastName" required>
+
+      <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+<script>
+  // Get the modal login
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+
+
+<script>
+  // Get the modal sign up
+  var modal = document.getElementById('id02');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+
+  <script src="js/action.js"></script>
+</body>
+</html>
